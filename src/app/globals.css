@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #fff;
+  --foreground: #243e36;
+  --accent: #f6fb7a;
+  --behind-the-nineties: var(--font-behind-the-nineties);
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  /* font-family: Helvetica, sans-serif; */
+  font-family: var(--font-roboto-flex), sans-serif;
+  font-size: 1rem;
+}
+span {
+  font-family: var(--font-behind-the-nineties);
+}
+::-webkit-scrollbar {
+  display: none;
+}
