@@ -28,9 +28,9 @@ const Testimonial = () => {
                 <p>Chengdu, China</p>
               </div>
               <p>
-                "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim
-                aliquam suscipit explicabo inventore. Quaerat corporis ratione
-                asperiores a aspernatur debitis."
+                &quot;Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Enim aliquam suscipit explicabo inventore. Quaerat corporis
+                ratione asperiores a aspernatur debitis.&quot;
               </p>
             </div>
           </CarouselItem>
@@ -41,9 +41,9 @@ const Testimonial = () => {
                 <p>Chengdu, China</p>
               </div>
               <p>
-                "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim
-                aliquam suscipit explicabo inventore. Quaerat corporis ratione
-                asperiores a aspernatur debitis."
+                &quot;Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Enim aliquam suscipit explicabo inventore. Quaerat corporis
+                ratione asperiores a aspernatur debitis.&quot;
               </p>
             </div>
           </CarouselItem>
@@ -54,9 +54,9 @@ const Testimonial = () => {
                 <p>Chengdu, China</p>
               </div>
               <p>
-                "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim
-                aliquam suscipit explicabo inventore. Quaerat corporis ratione
-                asperiores a aspernatur debitis."
+                &quot;Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Enim aliquam suscipit explicabo inventore. Quaerat corporis
+                ratione asperiores a aspernatur debitis.&quot;
               </p>
             </div>
           </CarouselItem>
@@ -67,9 +67,22 @@ const Testimonial = () => {
                 <p>Chengdu, China</p>
               </div>
               <p>
-                "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim
-                aliquam suscipit explicabo inventore. Quaerat corporis ratione
-                asperiores a aspernatur debitis."
+                &quot;Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Enim aliquam suscipit explicabo inventore. Quaerat corporis
+                ratione asperiores a aspernatur debitis.&quot;
+              </p>
+            </div>
+          </CarouselItem>
+          <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+            <div className="flex h-[200px] w-full flex-col gap-4 rounded-xl border-2 bg-white p-4">
+              <div className="">
+                <p className="text-xl font-semibold">John Doe</p>
+                <p>Chengdu, China</p>
+              </div>
+              <p>
+                &quot;Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Enim aliquam suscipit explicabo inventore. Quaerat corporis
+                ratione asperiores a aspernatur debitis.&quot;
               </p>
             </div>
           </CarouselItem>
