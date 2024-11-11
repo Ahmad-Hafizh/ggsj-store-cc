@@ -7,7 +7,7 @@ const Hero = () => {
     <div id="hero" className="lg:min:h-screen h-fit w-full">
       <div
         id="top"
-        className="flex h-fit min-h-[30vh] w-full flex-col items-center justify-center gap-4 border-b-2 pb-10 pt-20 lg:flex-row lg:gap-0"
+        className="flex h-fit min-h-[30vh] w-full flex-col items-center justify-center gap-4 border-b-2 pb-10 pt-20 lg:flex-row"
       >
         <div
           id="left"
@@ -19,12 +19,11 @@ const Hero = () => {
         </div>
         <div
           id="right"
-          className="flex h-full w-full flex-col items-center justify-center gap-4 text-center lg:w-2/5 lg:items-start lg:text-left"
+          className="flex h-full w-full flex-col items-center justify-center gap-4 text-center lg:w-2/5 lg:items-start lg:gap-6 lg:text-left"
         >
           <p className="w-full lg:w-3/4">
-            Gistara Geya Samasta Jaya directly linking farmers and fishermen
-            with consumers, ensures quality, sustainable produce and seafood
-            from source to table.
+            Gistara Geya Samasta Jaya is an indonesian trade company for
+            agriculture and marine product
           </p>
           <div className="flex h-full gap-4">
             <ButtonCTA href="/">Be our Buyer</ButtonCTA>
@@ -42,7 +41,7 @@ const Hero = () => {
           id="content"
           className="relative flex h-[400px] w-full items-center justify-center overflow-hidden rounded-xl lg:h-[60vh]"
         >
-          <Image src="/heroImage.webp" fill alt="hero image" />
+          <Image src="/heroImage.webp" fill alt="hero image" priority />
           <div className="absolute flex flex-col items-center text-white">
             <p className="text-xl font-extrabold md:text-3xl lg:text-5xl">
               GISTARA GEYA SAMASTA JAYA

@@ -17,10 +17,10 @@ const DeskNav: FC<IDeskNav> = ({ onClick }) => {
           </Link>
         </div>
         <div id="menu-desktop" className="hidden gap-4 md:flex">
-          <Link href="/">About</Link>
-          <Link href="/">Products</Link>
-          <Link href="/">Teams</Link>
-          <Link href="/">FAQ</Link>
+          <Link href="/about">About</Link>
+          <Link href="/products">Products</Link>
+          <Link href="/team">Teams</Link>
+          <Link href="/FAQ">FAQ</Link>
         </div>
         <div id="lang-cta" className="hidden md:flex">
           <ButtonCTA href="/">Contact</ButtonCTA>

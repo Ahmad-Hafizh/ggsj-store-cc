@@ -49,7 +49,8 @@ const FeatureProduct = () => {
           <div className="max:w-[200px] relative flex h-full w-full justify-center object-cover">
             <Image
               src="/featured-product/4.jpg"
-              fill
+              width={200}
+              height={200}
               alt="featured product image"
               className="aspect-square"
             />

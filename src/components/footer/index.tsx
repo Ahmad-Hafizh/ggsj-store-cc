@@ -4,7 +4,7 @@ import Footer from "./Footer";
 
 const FooterComponent = () => {
   return (
-    <div className="container mx-auto px-[5%] pb-10">
+    <div className="container mx-auto px-[5%] py-10">
       <CTA />
       <Footer />
     </div>
