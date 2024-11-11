@@ -1,11 +1,12 @@
+import { TypeProductGgsjAsset } from "@/types/product.type";
 import { createSlice } from "@reduxjs/toolkit";
 
 interface IProduct {
   fields: {
     title: string;
     slug: string;
-    cover?: any;
-    category?: any[];
+    cover?: TypeProductGgsjAsset;
+    category?: string[];
   };
 }
 

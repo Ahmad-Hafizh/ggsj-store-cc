@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import DeskNav from "./DeskNav";
 import MobileNav from "./MobileNav";
 import { useEffect } from "react";
-import { useAppSelector } from "@/lib/redux/hooks";
 import contentfulClient from "@/lib/contentfulClient";
 import { useAppDispatch } from "@/lib/redux/hooks";
 import { addBlogsData } from "@/lib/redux/reducers/blogsSlice";
