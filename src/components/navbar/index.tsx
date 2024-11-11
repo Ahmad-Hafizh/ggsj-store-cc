@@ -33,7 +33,7 @@ const Navbar = () => {
 
   useEffect(() => {
     fetchContent();
-  }, []);
+  }, [fetchContent]);
 
   return (
     <>
