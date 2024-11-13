@@ -52,10 +52,6 @@ const MobileNav: FC<IMobileNav> = ({ onClick, isMenuOpen }) => {
         <li>
           <Link href="/">Contact</Link>
         </li>
-        <div id="lang" className="flex">
-          <p>en</p>
-          <p>id</p>
-        </div>
       </ul>
     </div>
   );

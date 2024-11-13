@@ -20,7 +20,8 @@ const DeskNav: FC<IDeskNav> = ({ onClick }) => {
           <Link href="/about">About</Link>
           <Link href="/products">Products</Link>
           <Link href="/team">Teams</Link>
-          <Link href="/FAQ">FAQ</Link>
+          <Link href="/news">News</Link>
+          <Link href="/faq">FAQ</Link>
         </div>
         <div id="lang-cta" className="hidden md:flex">
           <ButtonCTA href="/">Contact</ButtonCTA>

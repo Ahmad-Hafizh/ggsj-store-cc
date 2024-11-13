@@ -5,6 +5,7 @@ import Navbar from "@/components/navbar";
 import { Roboto_Flex } from "next/font/google";
 import FooterComponent from "@/components/footer";
 import StoreProvider from "./StoreProvider";
+import Whatsapp from "@/components/Whatsapp";
 
 const behindTheNineties = localFont({
   preload: true,
@@ -37,6 +38,7 @@ export default function RootLayout({
           className={`${behindTheNineties.variable} ${robotoFlex.variable} antialiased`}
         >
           <Navbar />
+          <Whatsapp />
           {children}
           <FooterComponent />
         </body>

@@ -11,7 +11,23 @@ export interface TypeBlogGgSjFields {
   slug: EntryFieldTypes.Symbol;
   content?: EntryFieldTypes.RichText;
 }
-
+export interface TypeBlogGgsjAsset {
+  sys: { id: string };
+  fields: {
+    file: {
+      url: string;
+      details?: {
+        size: number;
+        image: {
+          width: number;
+          height: number;
+        };
+      };
+      fileName?: string;
+      contentType?: string;
+    };
+  };
+}
 export type TypeBlogGgSjSkeleton = EntrySkeletonType<
   TypeBlogGgSjFields,
   "blogGgSj"

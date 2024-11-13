@@ -1,3 +1,4 @@
+"use client";
 import ButtonCTA from "@/components/Button";
 import React from "react";
 import {
@@ -8,8 +9,11 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Image from "next/image";
+import { useAppSelector } from "@/lib/redux/hooks";
+import { TypeBlogGgsjAsset } from "@/types/blog.type";
 
 const News = () => {
+  const blogs = useAppSelector((state) => state.blogsReducer);
   return (
     <div className="flex w-full flex-col items-center border-b-2 pb-10">
       <div className="grid h-full w-full grid-cols-1 rounded-xl bg-foreground p-10 text-white lg:grid-cols-2 lg:gap-20">
@@ -36,71 +40,44 @@ const News = () => {
           }}
         >
           <CarouselContent className="">
-            <CarouselItem className="p-4 md:basis-1/2">
-              <div className="flex w-full flex-col gap-4 overflow-hidden rounded-lg bg-white p-2 text-foreground">
-                <div className="relative aspect-square w-full overflow-hidden">
-                  <Image src="/newscover.jpg" fill alt="news cover" />
-                </div>
-                <div>
-                  <p className="text-xl font-semibold leading-5">
-                    <span>Market condition November 2024</span>
-                  </p>
-                  <p className="text-xs">9 November 2024</p>
-                </div>
-              </div>
-            </CarouselItem>
-            <CarouselItem className="p-4 md:basis-1/2">
-              <div className="flex w-full flex-col gap-4 overflow-hidden rounded-lg bg-white p-2 text-foreground">
-                <div className="relative aspect-square w-full overflow-hidden">
-                  <Image src="/newscover.jpg" fill alt="news cover" />
-                </div>
-                <div>
-                  <p className="text-xl font-semibold leading-5">
-                    <span>Market condition November 2024</span>
-                  </p>
-                  <p className="text-xs">9 November 2024</p>
-                </div>
-              </div>
-            </CarouselItem>
-            <CarouselItem className="p-4 md:basis-1/2">
-              <div className="flex w-full flex-col gap-4 overflow-hidden rounded-lg bg-white p-2 text-foreground">
-                <div className="relative aspect-square w-full overflow-hidden">
-                  <Image src="/newscover.jpg" fill alt="news cover" />
-                </div>
-                <div>
-                  <p className="text-xl font-semibold leading-5">
-                    <span>Market condition November 2024</span>
-                  </p>
-                  <p className="text-xs">9 November 2024</p>
-                </div>
-              </div>
-            </CarouselItem>
-            <CarouselItem className="p-4 md:basis-1/2">
-              <div className="flex w-full flex-col gap-4 overflow-hidden rounded-lg bg-white p-2 text-foreground">
-                <div className="relative aspect-square w-full overflow-hidden">
-                  <Image src="/newscover.jpg" fill alt="news cover" />
-                </div>
-                <div>
-                  <p className="text-xl font-semibold leading-5">
-                    <span>Market condition November 2024</span>
-                  </p>
-                  <p className="text-xs">9 November 2024</p>
-                </div>
-              </div>
-            </CarouselItem>
-            <CarouselItem className="p-4 md:basis-1/2">
-              <div className="flex w-full flex-col gap-4 overflow-hidden rounded-lg bg-white p-2 text-foreground">
-                <div className="relative aspect-square w-full overflow-hidden">
-                  <Image src="/newscover.jpg" fill alt="news cover" />
-                </div>
-                <div>
-                  <p className="text-xl font-semibold leading-5">
-                    <span>Market condition November 2024</span>
-                  </p>
-                  <p className="text-xs">9 November 2024</p>
-                </div>
-              </div>
-            </CarouselItem>
+            {Array.from({ length: 4 }).map((e, i) => {
+              const blog = blogs[i];
+
+              if (blog) {
+                const releaseDate = new Date(
+                  blog.fields.releaseDate,
+                ).toLocaleString("en-id", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                });
+
+                return (
+                  <CarouselItem className="p-4 md:basis-1/2" key={i}>
+                    <div className="flex w-full flex-col gap-4 overflow-hidden rounded-lg bg-white p-2 text-foreground">
+                      <div className="relative aspect-square w-full overflow-hidden">
+                        <Image
+                          src={
+                            blog.fields.cover
+                              ? `https:${(blog.fields.cover as TypeBlogGgsjAsset).fields.file.url}`
+                              : "/featured-product/1.jpg"
+                          }
+                          width={260}
+                          height={260}
+                          alt="news cover"
+                        />
+                      </div>
+                      <div>
+                        <p className="text-xl font-semibold leading-5">
+                          <span>{blog.fields.title}</span>
+                        </p>
+                        <p className="text-xs">{releaseDate}</p>
+                      </div>
+                    </div>
+                  </CarouselItem>
+                );
+              }
+            })}
           </CarouselContent>
           <div className="relative flex w-full justify-center gap-4">
             <CarouselPrevious className="relative left-0 top-0 translate-y-0 border-white bg-transparent text-white" />
