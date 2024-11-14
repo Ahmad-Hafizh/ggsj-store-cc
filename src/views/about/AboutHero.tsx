@@ -15,8 +15,12 @@ const AboutHero = () => {
             />
           </div>
           <div id="right" className="w-full">
-            <h1 className="text-5xl md:text-7xl">
-              <span>Greetings from Gistara Geya Samasta Jaya</span>
+            <h1 className="text-4xl md:text-5xl lg:text-7xl">
+              <span>
+                Greetings from Gistara Geya Samasta Jaya -
+                <br />
+                Indonesian Experienced Export Company
+              </span>
             </h1>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import ButtonCTA from "../Button";
-import { FaPaperPlane } from "react-icons/fa6";
 import Link from "next/link";
+import { FaWhatsapp } from "react-icons/fa";
 
 const CTA = () => {
   return (
@@ -21,17 +21,20 @@ const CTA = () => {
           feel free to ask, our regards.
         </p>
         <Link
-          href="/"
+          href="https://wa.me/6287784401644?text=hello%20I%27m%20interested%20in%20gistara%20geya%20samasta%20jaya%20services%2C%20could%20you%20send%20me%20the%20detail%3F"
           className="hidden h-full w-full flex-col items-center gap-4 rounded-xl bg-accent p-4 text-center text-foreground lg:flex"
         >
-          <FaPaperPlane className="h-20 w-20" />
+          <FaWhatsapp className="h-20 w-20" />
           <p className="text-2xl font-extrabold leading-5">
             Send
             <br />
             Message
           </p>
         </Link>
-        <ButtonCTA href="/" className="!text-foreground lg:hidden">
+        <ButtonCTA
+          href="https://wa.me/6287784401644?text=hello%20I%27m%20interested%20in%20gistara%20geya%20samasta%20jaya%20services%2C%20could%20you%20send%20me%20the%20detail%3F"
+          className="!text-foreground lg:hidden"
+        >
           Send Messages
         </ButtonCTA>
       </div>

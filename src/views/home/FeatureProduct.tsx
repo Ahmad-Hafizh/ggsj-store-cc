@@ -58,7 +58,7 @@ const FeatureProduct = () => {
           <p className="text-xl font-semibold">Peanut</p>
         </div>
       </div>
-      <ButtonCTA href="/product">All Products</ButtonCTA>
+      <ButtonCTA href="/products">All Products</ButtonCTA>
     </div>
   );
 };

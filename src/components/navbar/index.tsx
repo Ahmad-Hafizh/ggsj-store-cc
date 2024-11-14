@@ -39,14 +39,15 @@ const Navbar = () => {
   return (
     <>
       <DeskNav
+        isMenuOpen={isMenuOpen}
         onClick={() => {
-          setIsMenuOpen(true);
+          setIsMenuOpen(!isMenuOpen);
         }}
       />
       <MobileNav
         isMenuOpen={isMenuOpen}
         onClick={() => {
-          setIsMenuOpen(false);
+          setIsMenuOpen(!isMenuOpen);
         }}
       />
     </>

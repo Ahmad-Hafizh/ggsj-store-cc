@@ -27,7 +27,7 @@ const About = () => {
             local growers, fishers, and you—creating a truly exceptional
             shopping experience.
           </p>
-          <ButtonCTA href="/about">learn more</ButtonCTA>
+          <ButtonCTA href="/about">Learn More</ButtonCTA>
         </div>
       </div>
       <div id="bottom" className="w-full">

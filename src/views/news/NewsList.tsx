@@ -24,34 +24,34 @@ const NewsList = () => {
             });
             return (
               <div
-                className="card flex aspect-[3/4] h-fit w-full flex-col gap-10 border-2 p-10"
+                className="card flex aspect-[3/4] h-fit w-full flex-col justify-between border-2 p-10"
                 key={i}
               >
-                <p className="text-sm">{releaseDate}</p>
-                <div className="relative aspect-[16/9] w-full">
-                  <Image
-                    src={
-                      blog.fields.cover
-                        ? `https:${(blog.fields.cover as TypeBlogGgsjAsset).fields.file.url}`
-                        : "/featured-product/1.jpg"
-                    }
-                    fill
-                    className="object-cover"
-                    alt="news cover"
-                  />
+                <div className="flex flex-col gap-4">
+                  <p className="text-sm">{releaseDate}</p>
+                  <div className="relative aspect-[16/9] w-full">
+                    <Image
+                      src={
+                        blog.fields.cover
+                          ? `https:${(blog.fields.cover as TypeBlogGgsjAsset).fields.file.url}`
+                          : "/featured-product/1.jpg"
+                      }
+                      fill
+                      className="object-cover"
+                      alt="news cover"
+                    />
+                  </div>
                 </div>
                 <div className="flex flex-col gap-4">
                   <p className="text-3xl font-semibold leading-6">
                     {blog.fields.title}
                   </p>
-                  <p className="text-sm">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Soluta saepe quo repellendus nesciunt repellat eligendi
-                    voluptates obcaecati porro cum at sunt nam, impedit totam
-                    commodi perspiciatis tempore? Laboriosam, vitae itaque.
-                  </p>
+                  <p className="text-sm">{blog.fields.preview}</p>
                 </div>
-                <Link href="/" className="text-sm uppercase underline">
+                <Link
+                  href={`/news/${blog.fields.slug}`}
+                  className="text-sm uppercase underline"
+                >
                   Read More
                 </Link>
               </div>

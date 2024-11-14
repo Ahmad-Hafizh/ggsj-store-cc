@@ -11,9 +11,12 @@ import {
 import Image from "next/image";
 import { useAppSelector } from "@/lib/redux/hooks";
 import { TypeBlogGgsjAsset } from "@/types/blog.type";
+import { useRouter } from "next/navigation";
 
 const News = () => {
   const blogs = useAppSelector((state) => state.blogsReducer);
+  const router = useRouter();
+
   return (
     <div className="flex w-full flex-col items-center border-b-2 pb-10">
       <div className="grid h-full w-full grid-cols-1 rounded-xl bg-foreground p-10 text-white lg:grid-cols-2 lg:gap-20">
@@ -53,8 +56,14 @@ const News = () => {
                 });
 
                 return (
-                  <CarouselItem className="p-4 md:basis-1/2" key={i}>
-                    <div className="flex w-full flex-col gap-4 overflow-hidden rounded-lg bg-white p-2 text-foreground">
+                  <CarouselItem
+                    className="cursor-pointer p-4 md:basis-1/2"
+                    key={i}
+                    onClick={() => {
+                      router.push(`/news/${blog.fields.slug}`);
+                    }}
+                  >
+                    <div className="flex h-[355px] w-full flex-col gap-4 overflow-hidden rounded-lg bg-white p-2 text-foreground">
                       <div className="relative aspect-square w-full overflow-hidden">
                         <Image
                           src={
@@ -62,9 +71,9 @@ const News = () => {
                               ? `https:${(blog.fields.cover as TypeBlogGgsjAsset).fields.file.url}`
                               : "/featured-product/1.jpg"
                           }
-                          width={260}
-                          height={260}
+                          fill
                           alt="news cover"
+                          className="object-cover"
                         />
                       </div>
                       <div>

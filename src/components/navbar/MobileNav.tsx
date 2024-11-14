@@ -1,56 +1,42 @@
 import React, { FC } from "react";
 import Link from "next/link";
-import { HiOutlineX } from "react-icons/hi";
 
 interface IMobileNav {
-  onClick: () => void;
   isMenuOpen: boolean;
+  onClick: () => void;
 }
 
-const MobileNav: FC<IMobileNav> = ({ onClick, isMenuOpen }) => {
+const MobileNav: FC<IMobileNav> = ({ isMenuOpen, onClick }) => {
   return (
     <div
       id="menu-mobile"
-      className="fixed right-full z-50 h-screen w-full bg-foreground px-[5%] text-background transition ease-in-out md:hidden"
+      className="fixed bottom-full z-40 h-screen w-full cursor-none transition ease-in-out md:hidden"
       style={
         isMenuOpen
-          ? { right: 0, transition: ".5s ease-in-out" }
-          : { right: "100%", transition: ".5s ease-in-out" }
+          ? { bottom: 0, transition: ".5s ease-in-out" }
+          : { bottom: "100%", transition: ".5s ease-in-out" }
       }
     >
-      <div
-        id="menu-mobile-bar"
-        className="flex h-16 w-full items-center justify-between"
-      >
-        <div id="logo">
-          <Link href="/" className="text-xl font-bold">
-            GGSJ
-          </Link>
-        </div>
-        <div id="menu-close" className="md:hidden">
-          <button type="button" onClick={onClick}>
-            <HiOutlineX className="h-fit w-6" />
-          </button>
-        </div>
-      </div>
-      <ul className="mt-10 flex flex-col gap-4 text-3xl font-bold">
-        <li>
+      <ul className="flex cursor-auto flex-col gap-4 border-b-2 border-default bg-background px-[5%] pb-10 pt-20 text-3xl font-bold">
+        <li onClick={onClick}>
           <Link href="/">Home</Link>
         </li>
-        <li>
-          <Link href="/">About</Link>
+        <li onClick={onClick}>
+          <Link href="/about">About</Link>
+        </li>
+        <li onClick={onClick}>
+          <Link href="/products">Products</Link>
+        </li>
+        <li onClick={onClick}>
+          <Link href="/team">Team</Link>
+        </li>
+        <li onClick={onClick}>
+          <Link href="/faq">FAQ</Link>
         </li>
         <li>
-          <Link href="/">Product</Link>
-        </li>
-        <li>
-          <Link href="/">Teams</Link>
-        </li>
-        <li>
-          <Link href="/">FAQ</Link>
-        </li>
-        <li>
-          <Link href="/">Contact</Link>
+          <Link href="https://wa.me/685810602695?text=hello%20I%27m%20interested%20in%20gistara%20geya%20samasta%20jaya%20services%2C%20could%20you%20send%20me%20the%20detail%3F">
+            Contact
+          </Link>
         </li>
       </ul>
     </div>

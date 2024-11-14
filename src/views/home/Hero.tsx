@@ -26,8 +26,13 @@ const Hero = () => {
             agriculture and marine product
           </p>
           <div className="flex h-full gap-4">
-            <ButtonCTA href="/">Be our Buyer</ButtonCTA>
-            <ButtonCTA href="/" className="!bg-foreground !text-white">
+            <ButtonCTA href="https://wa.me/685810602695?text=hello%20I%27m%20interested%20to%20cooperate%20with%20gistara%20geya%20samasta%20jaya%20as%20a%20buyer%2C%20can%20i%20get%20any%20detail%20about%20that">
+              Be our Buyer
+            </ButtonCTA>
+            <ButtonCTA
+              href="https://wa.me/685810602695?text=hello%20I%27m%20interested%20to%20cooperate%20with%20gistara%20geya%20samasta%20jaya%20as%20a%20supplier%2C%20can%20i%20get%20any%20detail%20about%20that"
+              className="!bg-foreground !text-white"
+            >
               Be our Supplier
             </ButtonCTA>
           </div>
@@ -39,7 +44,7 @@ const Hero = () => {
       >
         <div
           id="content"
-          className="relative flex h-[400px] w-full items-center justify-center overflow-hidden rounded-xl lg:h-[60vh]"
+          className="relative flex aspect-square w-full items-center justify-center overflow-hidden rounded-xl md:aspect-[4/3] lg:aspect-[1440/700]"
         >
           <Image src="/heroImage.webp" fill alt="hero image" priority />
           <div className="absolute flex flex-col items-center text-white">

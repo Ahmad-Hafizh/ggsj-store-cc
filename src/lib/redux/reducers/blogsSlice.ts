@@ -1,15 +1,15 @@
 import { TypeBlogGgsjAsset } from "@/types/blog.type";
 import { createSlice } from "@reduxjs/toolkit";
+import { Document as RichTextDocument } from "@contentful/rich-text-types";
 
 interface IBlog {
   fields: {
     title: string;
     slug: string;
     releaseDate: string;
-    content?: {
-      content: string[];
-    };
+    content?: RichTextDocument | undefined;
     cover?: TypeBlogGgsjAsset;
+    preview: string;
   };
 }
 const initialBlog: IBlog = {
@@ -17,6 +17,7 @@ const initialBlog: IBlog = {
     title: "",
     slug: "",
     releaseDate: "",
+    preview: "",
   },
 };
 

@@ -36,7 +36,7 @@ const Footer = () => {
           <Link href="/about">about</Link>
           <Link href="/products">products</Link>
           <Link href="/team">team</Link>
-          <Link href="/new">news</Link>
+          <Link href="/news">news</Link>
         </div>
       </div>
       <div>
@@ -44,8 +44,8 @@ const Footer = () => {
           <span>Help</span>
         </p>
         <div className="mt-2 flex flex-col">
-          <Link href="/about">frequently asked question</Link>
-          <Link href="/products">privacy & policy</Link>
+          <Link href="/faq">frequently asked question</Link>
+          <Link href="/faq">privacy & policy</Link>
         </div>
       </div>
     </footer>
