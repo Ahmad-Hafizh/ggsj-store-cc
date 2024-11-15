@@ -10,10 +10,16 @@ const Footer = () => {
           Gistara Geya <br /> Samasta Jaya
         </h2>
         <div className="mt-6 flex gap-4">
-          <Link href="https://wa.me/685810602695?text=hello%20I%27m%20interested%20in%20gistara%20geya%20samasta%20jaya%20services%2C%20could%20you%20send%20me%20the%20detail%3F">
+          <Link
+            href="https://wa.me/685810602695?text=hello%20I%27m%20interested%20in%20gistara%20geya%20samasta%20jaya%20services%2C%20could%20you%20send%20me%20the%20detail%3F"
+            aria-label="navigate to gistara geya samasta jaya instagram page"
+          >
             <FaInstagram className="h-7 w-7" />
           </Link>
-          <Link href="https://www.instagram.com/ahmofiz/">
+          <Link
+            href="https://www.instagram.com/ahmofiz/"
+            aria-label="navigate to gistara geya samasta jaya whatsapp"
+          >
             <FaWhatsapp className="h-7 w-7" />
           </Link>
         </div>
