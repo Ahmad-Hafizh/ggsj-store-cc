@@ -16,7 +16,9 @@ const ButtonCTA: React.FunctionComponent<IButtonComponentProps> = ({
     <div
       className={`${className} h-fit w-fit rounded-full border-2 border-default bg-accent px-3 py-2 font-semibold transition-all hover:bg-foreground hover:text-white`}
     >
-      <Link href={href}>{children}</Link>
+      <Link href={href} aria-label="call to action and navigate">
+        {children}
+      </Link>
     </div>
   );
 };

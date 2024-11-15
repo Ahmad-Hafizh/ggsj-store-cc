@@ -17,19 +17,39 @@ const DeskNav: FC<IDeskNav> = ({ onClick, isMenuOpen }) => {
           </Link>
         </div>
         <div id="menu-desktop" className="hidden gap-4 md:flex">
-          <Link href="/" className="transition hover:font-semibold">
+          <Link
+            href="/"
+            className="transition hover:font-semibold"
+            aria-label="navigate to homepage"
+          >
             Home
           </Link>
-          <Link href="/about" className="transition hover:font-semibold">
+          <Link
+            href="/about"
+            className="transition hover:font-semibold"
+            aria-label="navigate to about page"
+          >
             About
           </Link>
-          <Link href="/products" className="transition hover:font-semibold">
+          <Link
+            href="/products"
+            className="transition hover:font-semibold"
+            aria-label="navigate to products page"
+          >
             Products
           </Link>
-          <Link href="/team" className="transition hover:font-semibold">
+          <Link
+            href="/team"
+            className="transition hover:font-semibold"
+            aria-label="navigate to team page"
+          >
             Team
           </Link>
-          <Link href="/news" className="transition hover:font-semibold">
+          <Link
+            href="/news"
+            className="transition hover:font-semibold"
+            aria-label="navigate to news page"
+          >
             News
           </Link>
           {/* <Link href="/faq">FAQ</Link> */}
