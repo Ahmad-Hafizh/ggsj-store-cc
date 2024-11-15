@@ -32,7 +32,7 @@ const News = () => {
               route, and many other topics. So stay tune for weekly update.
             </p>
             <ButtonCTA href="/news" className="!border-white !bg-transparent">
-              See More <span className="hidden">click here</span>
+              Checkout our latest News
             </ButtonCTA>
           </div>
         </div>
