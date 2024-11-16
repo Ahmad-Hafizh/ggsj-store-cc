@@ -44,7 +44,7 @@ const Hero = () => {
       >
         <div
           id="content"
-          className="relative flex aspect-square w-full items-center justify-center overflow-hidden rounded-xl md:aspect-[4/3] lg:aspect-[1440/700]"
+          className="relative flex aspect-[371/371] w-full items-center justify-center overflow-hidden rounded-xl md:aspect-[4/3] lg:aspect-[1440/700]"
         >
           <Image
             src="/heroImage.webp"

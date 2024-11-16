@@ -10,7 +10,7 @@ const FeatureProduct = () => {
       </h2>
       <div
         id="wrapper"
-        className="grid w-full grid-cols-2 gap-4 md:grid-cols-4"
+        className="grid w-full grid-cols-2 gap-4 md:grid-cols-4 lg:gap-6 xl:w-10/12 xl:gap-10"
       >
         <FeatureProductCard
           imgUrl="/featured-product/1.jpg"
