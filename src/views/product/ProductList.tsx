@@ -50,36 +50,36 @@ const ProductList = () => {
           className="grid w-full grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
         >
           {products.map((product, i) => {
-            if (
-              category != "all" &&
-              product.fields.category?.includes(category) &&
-              product.fields.cover
-            ) {
-              return (
-                <ProductCard
-                  title={product.fields.title}
-                  category={product.fields.category?.join(" / ")}
-                  coverImg={`https:${(product.fields.cover as TypeProductGgsjAsset).fields.file.url}`}
-                  key={i}
-                />
-              );
-            } else if (
-              category === "all" &&
-              product.fields.cover &&
-              product.fields.category
-            ) {
-              return (
-                <ProductCard
-                  title={product.fields.title}
-                  category={product.fields.category?.join(" / ")}
-                  coverImg={`https:${(product.fields.cover as TypeProductGgsjAsset).fields.file.url}`}
-                  key={i}
-                />
-              );
+            if (product.fields.cover && product.fields.category) {
+              if (
+                category != "all" &&
+                product.fields.category?.includes(category)
+              ) {
+                return (
+                  <ProductCard
+                    title={product.fields.title}
+                    category={product.fields.category?.join(" / ")}
+                    coverImg={`https:${(product.fields.cover as TypeProductGgsjAsset).fields.file.url}`}
+                    key={i}
+                  />
+                );
+              } else if (category === "all") {
+                return (
+                  <ProductCard
+                    title={product.fields.title}
+                    category={product.fields.category?.join(" / ")}
+                    coverImg={`https:${(product.fields.cover as TypeProductGgsjAsset).fields.file.url}`}
+                    key={i}
+                  />
+                );
+              }
             } else {
               return (
-                <div key={i} className="h-[328px] w-full">
-                  <p>loading..</p>
+                <div
+                  className="flex h-full w-full items-center justify-center"
+                  key={i}
+                >
+                  <p>Loading...</p>
                 </div>
               );
             }
