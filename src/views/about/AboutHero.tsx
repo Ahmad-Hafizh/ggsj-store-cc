@@ -13,6 +13,7 @@ const AboutHero = () => {
               alt="about us picture"
               className="object-cover"
               sizes="(min-width: 1540px) calc(-5vw + 748px), (min-width: 1280px) calc(-5vw + 620px), (min-width: 1040px) calc(-5vw + 492px), (min-width: 780px) calc(-10vw + 768px), (min-width: 680px) calc(-10vw + 640px), calc(84.44vw + 17px)"
+              priority
             />
           </div>
           <div id="right" className="w-full">
