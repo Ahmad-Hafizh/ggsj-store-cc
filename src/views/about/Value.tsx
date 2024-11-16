@@ -3,15 +3,17 @@ import React from "react";
 const Value = () => {
   return (
     <div className="w-full border-b-2 py-10">
-      <div className="flex flex-col gap-4 lg:grid lg:grid-cols-2 lg:gap-0">
+      <div className="flex flex-col gap-10 lg:grid lg:grid-cols-2 lg:gap-0">
         <div className="relative">
-          <div className="top-10 h-fit w-full lg:sticky">
-            <h2 className="text-5xl md:text-7xl">our values</h2>
+          <div className="h-fit w-full lg:sticky lg:top-1/2">
+            <h2 className="text-5xl md:text-7xl">
+              <span>our values</span>
+            </h2>
           </div>
         </div>
         <div className="flex flex-col gap-10">
           <div className="flex flex-col gap-4">
-            <p className="text-5xl">
+            <p className="text-4xl">
               <span>Fresh and High-Quality</span>
             </p>
             <p>
@@ -22,7 +24,7 @@ const Value = () => {
             </p>
           </div>
           <div className="flex flex-col gap-4">
-            <p className="text-5xl">
+            <p className="text-4xl">
               <span>Committed to Sustainability</span>
             </p>
             <p>
@@ -33,7 +35,7 @@ const Value = () => {
             </p>
           </div>
           <div className="flex flex-col gap-4">
-            <p className="text-5xl">
+            <p className="text-4xl">
               <span>Various Choices & Competitive Prices</span>
             </p>
             <p>
@@ -45,7 +47,7 @@ const Value = () => {
             </p>
           </div>
           <div className="flex flex-col gap-4">
-            <p className="text-5xl">
+            <p className="text-4xl">
               <span>Fast and Safe Delivery</span>
             </p>
             <p>

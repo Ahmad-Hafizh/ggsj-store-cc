@@ -46,7 +46,13 @@ const Hero = () => {
           id="content"
           className="relative flex aspect-square w-full items-center justify-center overflow-hidden rounded-xl md:aspect-[4/3] lg:aspect-[1440/700]"
         >
-          <Image src="/heroImage.webp" fill alt="hero image" priority />
+          <Image
+            src="/heroImage.webp"
+            fill
+            alt="hero image"
+            priority
+            sizes="(min-width: 1540px) calc(-10vw + 1536px), (min-width: 1280px) calc(-10vw + 1280px), (min-width: 1040px) calc(-10vw + 1024px), (min-width: 780px) calc(-10vw + 768px), (min-width: 680px) calc(-10vw + 640px), calc(84.44vw + 17px)"
+          />
           <div className="absolute flex flex-col items-center text-white">
             <p className="text-xl font-extrabold md:text-3xl lg:text-5xl">
               GISTARA GEYA SAMASTA JAYA

@@ -1,9 +1,9 @@
 "use client";
 import React, { useState } from "react";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
-import Image from "next/image";
 import { useAppSelector } from "@/lib/redux/hooks";
 import { TypeProductGgsjAsset } from "@/types/product.type";
+import ProductCard from "./ProductCard";
 
 const ProductList = () => {
   const products = useAppSelector((state) => state.productsReducer);
@@ -43,12 +43,6 @@ const ProductList = () => {
             Marine
           </ToggleGroupItem>
         </ToggleGroup>
-        {/* <input
-          type="text"
-          placeholder="Search"
-          className="h-fit w-fit rounded-full border-2 px-4 py-2"
-
-        /> */}
       </div>
       <div id="list" className="w-full border-b-2 py-10">
         <div
@@ -56,56 +50,36 @@ const ProductList = () => {
           className="grid w-full grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
         >
           {products.map((product, i) => {
-            if (category != "all") {
-              if (product.fields.category?.includes(category)) {
-                return (
-                  <div className="min-h-[300px] w-full border" key={i}>
-                    <div className="relative aspect-square w-full">
-                      <Image
-                        src={
-                          product.fields.cover
-                            ? `https:${(product.fields.cover as TypeProductGgsjAsset).fields.file.url}`
-                            : "/featured-product/1.jpg"
-                        }
-                        fill
-                        alt="product image"
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="h-fit w-full px-4 pb-4">
-                      <p className="text-sm">
-                        {product.fields.category?.join(" / ")}
-                      </p>
-                      <p className="text-2xl font-semibold leading-4">
-                        {product.fields.title}
-                      </p>
-                    </div>
-                  </div>
-                );
-              }
+            if (
+              category != "all" &&
+              product.fields.category?.includes(category) &&
+              product.fields.cover
+            ) {
+              return (
+                <ProductCard
+                  title={product.fields.title}
+                  category={product.fields.category?.join(" / ")}
+                  coverImg={`https:${(product.fields.cover as TypeProductGgsjAsset).fields.file.url}`}
+                  key={i}
+                />
+              );
+            } else if (
+              category === "all" &&
+              product.fields.cover &&
+              product.fields.category
+            ) {
+              return (
+                <ProductCard
+                  title={product.fields.title}
+                  category={product.fields.category?.join(" / ")}
+                  coverImg={`https:${(product.fields.cover as TypeProductGgsjAsset).fields.file.url}`}
+                  key={i}
+                />
+              );
             } else {
               return (
-                <div className="min-h-[300px] w-full border" key={i}>
-                  <div className="relative aspect-square w-full">
-                    <Image
-                      src={
-                        product.fields.cover
-                          ? `https:${(product.fields.cover as TypeProductGgsjAsset).fields.file.url}`
-                          : "/featured-product/1.jpg"
-                      }
-                      fill
-                      alt="product image"
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="h-fit w-full px-4 pb-4">
-                    <p className="text-sm">
-                      {product.fields.category?.join(" / ")}
-                    </p>
-                    <p className="text-2xl font-semibold leading-4">
-                      {product.fields.title}
-                    </p>
-                  </div>
+                <div key={i} className="h-[328px] w-full">
+                  <p>loading..</p>
                 </div>
               );
             }

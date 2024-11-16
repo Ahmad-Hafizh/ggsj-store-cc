@@ -46,15 +46,7 @@ const News = () => {
             {Array.from({ length: 4 }).map((e, i) => {
               const blog = blogs[i];
 
-              if (blog) {
-                const releaseDate = new Date(
-                  blog.fields.releaseDate,
-                ).toLocaleString("en-id", {
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric",
-                });
-
+              if (blog && blog.fields.releaseDate) {
                 return (
                   <CarouselItem
                     className="cursor-pointer p-4 md:basis-1/2"
@@ -65,22 +57,33 @@ const News = () => {
                   >
                     <div className="flex h-[355px] w-full flex-col gap-4 overflow-hidden rounded-lg bg-white p-2 text-foreground">
                       <div className="relative aspect-square w-full overflow-hidden">
-                        <Image
-                          src={
-                            blog.fields.cover
-                              ? `https:${(blog.fields.cover as TypeBlogGgsjAsset).fields.file.url}`
-                              : "/featured-product/1.jpg"
-                          }
-                          fill
-                          alt="news cover"
-                          className="object-cover"
-                        />
+                        {blog.fields.cover ? (
+                          <Image
+                            src={`https:${(blog.fields.cover as TypeBlogGgsjAsset).fields.file.url}`}
+                            fill
+                            className="object-cover"
+                            alt="news cover"
+                          />
+                        ) : (
+                          <div className="flex h-full w-full items-center justify-center bg-[#ececec]">
+                            <p>loading</p>
+                          </div>
+                        )}
                       </div>
                       <div>
                         <p className="text-xl font-semibold leading-5">
                           <span>{blog.fields.title}</span>
                         </p>
-                        <p className="text-xs">{releaseDate}</p>
+                        <p className="text-xs">
+                          {new Date(blog.fields.releaseDate).toLocaleString(
+                            "en-id",
+                            {
+                              year: "numeric",
+                              month: "long",
+                              day: "numeric",
+                            },
+                          )}
+                        </p>
                       </div>
                     </div>
                   </CarouselItem>

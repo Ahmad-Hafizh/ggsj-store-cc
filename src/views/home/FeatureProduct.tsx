@@ -1,6 +1,6 @@
 import ButtonCTA from "@/components/Button";
-import Image from "next/image";
 import React from "react";
+import FeatureProductCard from "./FeatureProductCard";
 
 const FeatureProduct = () => {
   return (
@@ -12,51 +12,13 @@ const FeatureProduct = () => {
         id="wrapper"
         className="grid w-full grid-cols-2 gap-4 md:grid-cols-4"
       >
-        <div className="flex h-full w-full flex-col items-center">
-          <div className="relative flex h-full w-full justify-center object-cover">
-            <Image
-              src="/featured-product/1.jpg"
-              width={200}
-              height={200}
-              alt="featured product image"
-            />
-          </div>
-          <p className="text-xl font-semibold">Tuna</p>
-        </div>
-        <div className="flex h-full w-full flex-col items-center">
-          <div className="relative flex h-full w-full justify-center object-cover">
-            <Image
-              src="/featured-product/2.jpg"
-              width={200}
-              height={200}
-              alt="featured product image"
-            />
-          </div>
-          <p className="text-xl font-semibold">Salmon</p>
-        </div>
-        <div className="flex h-full w-full flex-col items-center">
-          <div className="relative flex h-full w-full justify-center object-cover">
-            <Image
-              src="/featured-product/3.jpg"
-              width={200}
-              height={200}
-              alt="featured product image"
-            />
-          </div>
-          <p className="text-xl font-semibold">Cabbage</p>
-        </div>
-        <div className="flex h-full w-full flex-col items-center">
-          <div className="max:w-[200px] relative flex h-full w-full justify-center object-cover">
-            <Image
-              src="/featured-product/4.jpg"
-              width={200}
-              height={200}
-              alt="featured product image"
-              className="aspect-square"
-            />
-          </div>
-          <p className="text-xl font-semibold">Peanut</p>
-        </div>
+        <FeatureProductCard
+          imgUrl="/featured-product/1.jpg"
+          name="Bluefin Tuna"
+        />
+        <FeatureProductCard imgUrl="/featured-product/2.jpg" name="Salmon" />
+        <FeatureProductCard imgUrl="/featured-product/3.jpg" name="Cabbage" />
+        <FeatureProductCard imgUrl="/featured-product/4.jpg" name="Peanut" />
       </div>
       <ButtonCTA href="/products">See all Products</ButtonCTA>
     </div>

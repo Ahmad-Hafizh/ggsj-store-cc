@@ -15,31 +15,33 @@ const NewsList = () => {
         {Array.from({ length: listCount }).map((e, i) => {
           const blog = blogs[i];
           if (blog) {
-            const releaseDate = new Date(
-              blog.fields.releaseDate,
-            ).toLocaleString("en-id", {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            });
             return (
               <div
                 className="card flex aspect-[3/4] h-fit w-full flex-col justify-between border-2 p-10"
                 key={i}
               >
                 <div className="flex flex-col gap-4">
-                  <p className="text-sm">{releaseDate}</p>
+                  <p className="text-sm">
+                    {new Date(blog.fields.releaseDate).toLocaleString("en-id", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}
+                  </p>
                   <div className="relative aspect-[16/9] w-full">
-                    <Image
-                      src={
-                        blog.fields.cover
-                          ? `https:${(blog.fields.cover as TypeBlogGgsjAsset).fields.file.url}`
-                          : "/featured-product/1.jpg"
-                      }
-                      fill
-                      className="object-cover"
-                      alt="news cover"
-                    />
+                    {blog.fields.cover ? (
+                      <Image
+                        src={`https:${(blog.fields.cover as TypeBlogGgsjAsset).fields.file.url}`}
+                        fill
+                        className="object-cover"
+                        alt="news cover"
+                        sizes="(min-width: 1540px) calc(-3.29vw + 428px), (min-width: 1280px) calc(-3.33vw + 344px), (min-width: 1040px) calc(-3.18vw + 256px), (min-width: 780px) calc(-5vw + 301px), (min-width: 680px) calc(-10vw + 557px), calc(84.44vw - 66px)"
+                      />
+                    ) : (
+                      <div className="flex aspect-[16/9] h-full w-full items-center justify-center bg-[#ececec]">
+                        <p>loading</p>
+                      </div>
+                    )}
                   </div>
                 </div>
                 <div className="flex flex-col gap-4">
