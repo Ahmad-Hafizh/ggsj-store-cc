@@ -39,6 +39,11 @@ const MobileNav: FC<IMobileNav> = ({ isMenuOpen, onClick }) => {
           </Link>
         </li>
         <li onClick={onClick}>
+          <Link href="/news" aria-label="navigate to news page">
+            News
+          </Link>
+        </li>
+        <li onClick={onClick}>
           <Link href="/faq" aria-label="navigate to faq page">
             FAQ
           </Link>
