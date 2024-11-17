@@ -22,7 +22,7 @@ const Testimonial = () => {
       >
         <CarouselContent className="w-full">
           <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-            <div className="flex h-[200px] w-full flex-col gap-4 rounded-xl border-2 bg-white p-4">
+            <div className="flex min-h-[200px] w-full flex-col gap-4 rounded-xl border-2 bg-white p-4">
               <div className="">
                 <p className="text-xl font-semibold">John Doe</p>
                 <p>Chengdu, China</p>
@@ -35,7 +35,7 @@ const Testimonial = () => {
             </div>
           </CarouselItem>
           <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-            <div className="flex h-[200px] w-full flex-col gap-4 rounded-xl border-2 bg-white p-4">
+            <div className="flex min-h-[200px] w-full flex-col gap-4 rounded-xl border-2 bg-white p-4">
               <div className="">
                 <p className="text-xl font-semibold">John Doe</p>
                 <p>Chengdu, China</p>
@@ -48,7 +48,7 @@ const Testimonial = () => {
             </div>
           </CarouselItem>
           <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-            <div className="flex h-[200px] w-full flex-col gap-4 rounded-xl border-2 bg-white p-4">
+            <div className="flex min-h-[200px] w-full flex-col gap-4 rounded-xl border-2 bg-white p-4">
               <div className="">
                 <p className="text-xl font-semibold">John Doe</p>
                 <p>Chengdu, China</p>
@@ -61,7 +61,7 @@ const Testimonial = () => {
             </div>
           </CarouselItem>
           <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-            <div className="flex h-[200px] w-full flex-col gap-4 rounded-xl border-2 bg-white p-4">
+            <div className="flex min-h-[200px] w-full flex-col gap-4 rounded-xl border-2 bg-white p-4">
               <div className="">
                 <p className="text-xl font-semibold">John Doe</p>
                 <p>Chengdu, China</p>
@@ -74,7 +74,7 @@ const Testimonial = () => {
             </div>
           </CarouselItem>
           <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-            <div className="flex h-[200px] w-full flex-col gap-4 rounded-xl border-2 bg-white p-4">
+            <div className="flex min-h-[200px] w-full flex-col gap-4 rounded-xl border-2 bg-white p-4">
               <div className="">
                 <p className="text-xl font-semibold">John Doe</p>
                 <p>Chengdu, China</p>

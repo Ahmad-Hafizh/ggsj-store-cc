@@ -29,10 +29,10 @@ const TeamList = async () => {
     <div className="w-full border-b-2 py-10">
       <div
         id="wrapper"
-        className="grid grid-cols-2 gap-x-6 gap-y-10 lg:grid-cols-4"
+        className="grid w-full grid-cols-2 gap-x-6 gap-y-10 overflow-x-hidden lg:grid-cols-4"
       >
         {teams.map((e, i) => (
-          <div className="card flex w-full flex-col gap-2" key={i}>
+          <div className="flex w-full flex-col gap-2" key={i}>
             <div className="relative aspect-square w-full">
               <Image
                 src={e.picture.large}
@@ -41,10 +41,10 @@ const TeamList = async () => {
                 className="object-cover"
               />
             </div>
-            <p className="text-2xl">{`${e.name.first} ${e.name.last}`}</p>
+            <p className="text-wrap text-2xl">{`${e.name.first} ${e.name.last}`}</p>
             <div>
-              <p className="text-sm">{e.phone}</p>
-              <p className="text-sm">{e.email}</p>
+              <p className="text-wrap text-sm">{e.phone}</p>
+              <p className="text-wrap text-sm">{e.email}</p>
             </div>
           </div>
         ))}

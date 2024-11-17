@@ -49,7 +49,7 @@ const News = () => {
               if (blog && blog.fields.releaseDate) {
                 return (
                   <CarouselItem
-                    className="cursor-pointer p-4 md:basis-1/2"
+                    className="cursor-pointer p-4 md:basis-1/2 lg:basis-full xl:basis-1/2"
                     key={i}
                     onClick={() => {
                       router.push(`/news/${blog.fields.slug}`);
